@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 #
 import scrapy
+import json
 
 class dydlItem(scrapy.Item): 
     title = scrapy.Field()
@@ -20,13 +21,13 @@ class dydlSpider(scrapy.Spider):
    
 
     def parse(self,response):
-        #print response.body
-        for url in response.xpath('//article//a/@href').extract():
-            urls = ["https://news.dyly.com",]
-            url = urls[0] + url
+        response_html =  response.body
+        result = json.loads(response_html)
+        result_newsid = result['newsContent']
+        urls = ["https://news.dyly.com/news/detail/",]
+        for i in  result_newsid:
+            url = urls[0] + i['objectId'] + ".html"
             yield scrapy.Request(url,callback=self.parse_item)
-            #yield scrapy.Request(url="https://news.dyly.com/getAppNewsList.do",meta={'ajax':'ajax','type':'news_primary','loginMethod':'wap','pageNo':'2'},callback=self.parse_item)
-
 
     def parse_item(self,response):
         item = dydlItem()
