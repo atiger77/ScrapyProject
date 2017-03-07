@@ -38,10 +38,10 @@ class dydlSpider(scrapy.Spider):
         else:
             item['content'] = response.xpath('//div//p/text()').extract()
 
-        
+        '''
         print "===============================================" *3
         print "title:",item['title']
         print "content:",item['content']
         print "===============================================" *3
-        
+        '''
         yield item
