@@ -17,6 +17,7 @@ class dydlSpider(scrapy.Spider):
    
     
     def start_requests(self):
+    #通过ajax请求获取对应news_id之后请求回调函数
         return [scrapy.http.FormRequest('https://news.dyly.com/getAppNewsList.do',method="POST",formdata={'ajax':'ajax','type':'news_primary','loginMethod':'wap','pageNo':'2'})]
    
 
@@ -26,6 +27,7 @@ class dydlSpider(scrapy.Spider):
         result_newsid = result['newsContent']
         urls = ["https://news.dyly.com/news/detail/",]
         for i in  result_newsid:
+            #拼接出文章url
             url = urls[0] + i['objectId'] + ".html"
             yield scrapy.Request(url,callback=self.parse_item)
 
