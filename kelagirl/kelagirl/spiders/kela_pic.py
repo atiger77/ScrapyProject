@@ -12,4 +12,8 @@ class KeLaGirlSpider(scrapy.Spider):
     ]
 
     def parse(self,response):
-        print response.xpath('//div[@class="zhuanjimorewrap"]/div/@pid').extract()
+        uid_list = response.xpath('//div[@class="zhuanjimorewrap"]/div/@pid').extract()
+        urls = ["http://www.kelagirls.com/zhuanji!findForDetail.action?pid=",]
+        for i in uid_list:
+            url = urls[0] + i 
+            print url
