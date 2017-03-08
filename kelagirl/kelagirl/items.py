@@ -9,5 +9,4 @@ import scrapy
 
 
 class KelagirlItem(scrapy.Item):
-    image_url = scrapy.Field()
-    image = scrapy.Field()
+    image_urls = scrapy.Field()
