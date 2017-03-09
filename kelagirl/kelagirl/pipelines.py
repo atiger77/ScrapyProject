@@ -7,9 +7,8 @@
 
 
 import scrapy
-from scrapy.pipeline.images import ImagesPipeline
+from scrapy.pipelines.images import ImagesPipeline
 from scrapy.exceptions import DropItem
-
 class KelagirlPipeline(ImagesPipeline):
 
     def get_media_requests(self, item, info):

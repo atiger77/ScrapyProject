@@ -14,6 +14,7 @@ BOT_NAME = 'kelagirl'
 SPIDER_MODULES = ['kelagirl.spiders']
 NEWSPIDER_MODULE = 'kelagirl.spiders'
 
+IMAGES_STORE = '.'
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'kelagirl (+http://www.yourdomain.com)'
@@ -65,9 +66,9 @@ DOWNLOADER_MIDDLEWARES = {
 
 # Configure item pipelines
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
-#ITEM_PIPELINES = {
-#    'kelagirl.pipelines.SomePipeline': 300,
-#}
+ITEM_PIPELINES = {
+    'kelagirl.pipelines.KelagirlPipeline': 3,
+}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See http://doc.scrapy.org/en/latest/topics/autothrottle.html

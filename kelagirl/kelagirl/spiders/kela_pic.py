@@ -16,8 +16,13 @@ class KeLaGirlSpider(scrapy.Spider):
         urls = ["http://www.kelagirls.com/zhuanji!findForDetail.action?pid=",]
         for i in uid_list:
             url = urls[0] + i 
-            yield scrapy.Request(url,callback=self.parse_item))
+            yield scrapy.Request(url,callback=self.parse_item)
 
     def parse_item(self,response):
         item = KelagirlItem()
         #继续爬取图片路径
+        image_url = response.xpath('//div[@class="smallwrap"]/img/@src').extract()
+        image_url_full = map(lambda x: 'http://www.kelagirls.com/'+x,image_url)
+ 
+        item['image_urls'] =  image_url_full
+        yield item
