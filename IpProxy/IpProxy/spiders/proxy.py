@@ -8,4 +8,4 @@ class IpProxySpider(scrapy.Spider):
     ]
 
     def parse(self,response):
-        print response.xpath('//div[@class="content"]').extract()
+        print response.xpath('').extract()
