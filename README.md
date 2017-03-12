@@ -1,5 +1,20 @@
 # Scrapy-Project
 
+## 《目录》
+
+1. 糗事百科 QiuBai
+
+2. 天气预报 WeatherReport
+
+3. 第一路演 dyly 
+
+4. 克拉女 kelagirl
+
+5. 代理IP IpProxy
+
+6. 肉丝写真 rosiok
+
+
 ## QiuBai
 抓取糗事百科的作者和糗事内容，最后都放到EXCEL中保存。
 
@@ -28,6 +43,6 @@
 [TODO] 完成代理ip存库工作；
 
 ## rosiok
-爬取rosiok上的写真图片；
+爬取rosiok上的写真图片。
 
 [TODO] 爬取写真图片；
