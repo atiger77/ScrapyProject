@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Scrapy settings for kelagirl project
+# Scrapy settings for rosiok project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -9,18 +9,14 @@
 #     http://scrapy.readthedocs.org/en/latest/topics/downloader-middleware.html
 #     http://scrapy.readthedocs.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = 'kelagirl'
+BOT_NAME = 'rosiok'
 
-SPIDER_MODULES = ['kelagirl.spiders']
-NEWSPIDER_MODULE = 'kelagirl.spiders'
+SPIDER_MODULES = ['rosiok.spiders']
+NEWSPIDER_MODULE = 'rosiok.spiders'
 
-IMAGES_STORE = '.'
-
-USERNAME = 'zhujialin'
-PASSWORD = '123jkluio' 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = 'kelagirl (+http://www.yourdomain.com)'
+#USER_AGENT = 'rosiok (+http://www.yourdomain.com)'
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
@@ -31,7 +27,7 @@ ROBOTSTXT_OBEY = True
 # Configure a delay for requests for the same website (default: 0)
 # See http://scrapy.readthedocs.org/en/latest/topics/settings.html#download-delay
 # See also autothrottle settings and docs
-DOWNLOAD_DELAY = 1
+#DOWNLOAD_DELAY = 3
 # The download delay setting will honor only one of:
 #CONCURRENT_REQUESTS_PER_DOMAIN = 16
 #CONCURRENT_REQUESTS_PER_IP = 16
@@ -51,15 +47,14 @@ DOWNLOAD_DELAY = 1
 # Enable or disable spider middlewares
 # See http://scrapy.readthedocs.org/en/latest/topics/spider-middleware.html
 #SPIDER_MIDDLEWARES = {
-#    'kelagirl.middlewares.MyCustomSpiderMiddleware': 543,
+#    'rosiok.middlewares.MyCustomSpiderMiddleware': 543,
 #}
 
 # Enable or disable downloader middlewares
 # See http://scrapy.readthedocs.org/en/latest/topics/downloader-middleware.html
-DOWNLOADER_MIDDLEWARES = {
-    'kelagirl.middlewares.RandomUAMiddleware' :543,
-    'kelagirl.middlewares.MyCustomDownloaderMiddleware': None,
-}
+#DOWNLOADER_MIDDLEWARES = {
+#    'rosiok.middlewares.MyCustomDownloaderMiddleware': 543,
+#}
 
 # Enable or disable extensions
 # See http://scrapy.readthedocs.org/en/latest/topics/extensions.html
@@ -69,9 +64,9 @@ DOWNLOADER_MIDDLEWARES = {
 
 # Configure item pipelines
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
-ITEM_PIPELINES = {
-    'kelagirl.pipelines.KelagirlPipeline': 3,
-}
+#ITEM_PIPELINES = {
+#    'rosiok.pipelines.SomePipeline': 300,
+#}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See http://doc.scrapy.org/en/latest/topics/autothrottle.html
