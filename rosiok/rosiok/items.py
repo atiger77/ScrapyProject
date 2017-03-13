@@ -9,6 +9,5 @@ import scrapy
 
 
 class RosiokItem(scrapy.Item):
-    # define the fields for your item here like:
-    # name = scrapy.Field()
-    pass
+    img_url = scrapy.Field()
+    image_paths = scrapy.Field()
