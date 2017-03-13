@@ -18,6 +18,8 @@ NEWSPIDER_MODULE = 'JanDan.spiders'
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'JanDan (+http://www.yourdomain.com)'
 
+
+
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
 
@@ -52,9 +54,9 @@ ROBOTSTXT_OBEY = True
 
 # Enable or disable downloader middlewares
 # See http://scrapy.readthedocs.org/en/latest/topics/downloader-middleware.html
-#DOWNLOADER_MIDDLEWARES = {
-#    'JanDan.middlewares.MyCustomDownloaderMiddleware': 543,
-#}
+DOWNLOADER_MIDDLEWARES = {
+    'JanDan.middlewares.RandomUAMiddleware': 300,
+}
 
 # Enable or disable extensions
 # See http://scrapy.readthedocs.org/en/latest/topics/extensions.html
