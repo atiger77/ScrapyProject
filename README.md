@@ -14,6 +14,8 @@
 
 6. 肉丝写真 rosiok
 
+7. 煎蛋图片 JianDan
+
 
 ## QiuBai
 抓取糗事百科的作者和糗事内容，最后都放到EXCEL中保存。
@@ -44,5 +46,10 @@
 
 ## rosiok
 爬取rosiok上的写真图片。
+
+[TODO] 爬取写真图片；
+
+## JianDan
+爬取JianDan上的写真图片。
 
 [TODO] 爬取写真图片；
