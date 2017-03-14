@@ -16,6 +16,7 @@
 
 7. 煎蛋美女图 JianDan
 
+![coding](Coding.gif)
 
 ## QiuBai
 抓取糗事百科的作者和糗事内容，最后都放到EXCEL中保存。
