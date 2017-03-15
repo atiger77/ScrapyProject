@@ -7,7 +7,7 @@ class JandanSpider(CrawlSpider):
     name = "JanDan"
     allowed_domains = ["jandan.net"]
     start_urls = [
-        "http://jandan.net/ooxx"
+        "http://jandan.net/ooxx",
     ]
 
 
@@ -18,5 +18,6 @@ class JandanSpider(CrawlSpider):
 
     def parse_item(self, response):
         for href in response.xpath('//a[@class="view_img_link"]/@href').extract():
-            item = JandanItem(image_urls=[href])
+            pic_url = "http:" + href
+            item = JandanItem(image_urls=[pic_url])
             yield item
