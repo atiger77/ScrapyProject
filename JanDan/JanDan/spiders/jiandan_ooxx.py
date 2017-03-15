@@ -10,7 +10,11 @@ class JandanSpider(CrawlSpider):
         "http://jandan.net/ooxx",
     ]
 
+'''
+使用CrawlSpider方法scrapy自行深入爬区，page页数使用正则进行数字匹配
+爬取的图片地址加上“http:”进行后续下载
 
+'''
     rules = (
         Rule(LinkExtractor(allow=('http://jandan.net/ooxx/page-\d+#comments', )), callback='parse_item', follow=True),
     )

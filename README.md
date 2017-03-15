@@ -53,4 +53,4 @@
 ## JianDan
 爬取JianDan上的写真图片。
 
-[DONE] 爬取写真图片；
+[DONE] 爬取煎蛋网妹子图片,使用CrawlSpider进行爬取；
