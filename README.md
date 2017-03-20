@@ -46,7 +46,7 @@
 [TODO] 完成代理ip存库工作；
 
 ## rosiok
-爬取rosiok上的写真图片。
+爬取rosiok上的写真图片,借鉴别人代码；
 
 [DONE] 爬取写真图片；
 
