@@ -16,6 +16,8 @@
 
 7. 煎蛋美女图 JianDan
 
+8. 豆瓣  DouBan
+
 ![coding](Coding.gif)
 
 ## QiuBai
@@ -54,3 +56,6 @@
 爬取JianDan上的写真图片。
 
 [DONE] 爬取煎蛋网妹子图片,使用CrawlSpider进行深层爬取；
+
+## DouBan
+爬取高分图书信息。
