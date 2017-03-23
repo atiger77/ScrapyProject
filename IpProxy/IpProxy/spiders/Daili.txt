@@ -5,4 +5,4 @@ proxy360  http://www.proxy360.cn/default.aspx  代理IP数太少
 zdaye     http://ip.zdaye.com/ 端口号是图片需要OCR
 cz88      http://www.cz88.net/proxy  代理IP数太少
 cn-proxy  http://cn-proxy.com  代理IP数太少
-66ip      http://www.66ip.cn
+66ip      http://www.66ip.cn Done
