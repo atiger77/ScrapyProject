@@ -14,6 +14,7 @@ BOT_NAME = 'IpProxy'
 SPIDER_MODULES = ['IpProxy.spiders']
 NEWSPIDER_MODULE = 'IpProxy.spiders'
 
+COMMANDS_MODULE = 'IpProxy.commands'
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'IpProxy (+http://www.yourdomain.com)'
