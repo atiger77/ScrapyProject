@@ -26,6 +26,8 @@ class xicidaili(scrapy.Spider):
         item['proxy_port'] = response.xpath('//*[@id="ip_list"]//tr/td[3]/text()').extract()
         ''' 
         print "=" * 15
+        print "xici ipaddr:"
         print "ipaddr:",item['proxy_ipaddr']," port:",item['proxy_port']
+        print "=" * 15
         '''
         yield item

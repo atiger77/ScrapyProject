@@ -26,6 +26,8 @@ class sixsixip(scrapy.Spider):
         item['proxy_port'] = response.xpath('//*[@id="footer"]/div/table//tr/td[2]/text()').extract()
         '''
         print "=" * 15
+        print "66ip ipaddr:"
         print "ipaddr:",item['proxy_ipaddr']," port:",item['proxy_port']
+        print "=" * 15
         '''
         yield item
