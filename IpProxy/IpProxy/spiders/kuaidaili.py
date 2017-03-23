@@ -14,11 +14,13 @@ http://www.66ip.cn
 '''
 
 
-class IpProxySpider(scrapy.Spider):
-    name="IpProxy"
+class kuaidaili(scrapy.Spider):
+#class IpProxySpider(scrapy.Spider):
+    #name="IpProxy"
+    name="kuaidaili"
     start_urls = [
-        "http://www.xxx.com/",
+        "http://www.kuaidaili.com/proxylist/1/",
     ]
 
     def parse(self,response):
-        print response.xpath('').extract()
+        print response.xpath('//*[@id="index_free_list"]/table/tbody/tr[1]/td[1]').extract()

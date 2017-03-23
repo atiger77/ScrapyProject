@@ -8,7 +8,6 @@
 import scrapy
 
 
-class IpproxyItem(scrapy.Item):
-    # define the fields for your item here like:
-    # name = scrapy.Field()
-    pass
+class IpProxyItem(scrapy.Item):
+    proxy_ipaddr = scrapy.Field()
+    proxy_port = scrapy.Field()

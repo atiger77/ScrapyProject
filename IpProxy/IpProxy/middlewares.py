@@ -24,3 +24,7 @@ class RandomUAMiddleware(object):
     def process_request(self,request,spider):
         request.headers["User-Agent"] = random.choice(USER_AGENTS)
 
+
+class PrintUAMiddleware(object):
+    def process_request(self,request,spider):
+        print request.headers["User-Agent"] 
