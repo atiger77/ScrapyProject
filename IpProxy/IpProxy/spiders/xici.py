@@ -18,7 +18,7 @@ class xicidaili(scrapy.Spider):
     name="xici"
     url = "http://www.xicidaili.com/nn/"
     start_urls = [
-        url + str(i) for i in range(1,5)]
+        url + str(i) for i in range(1,5)
     ]
 
 

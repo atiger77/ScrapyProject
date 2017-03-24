@@ -16,16 +16,18 @@ http://www.66ip.cn
 
 class sixsixip(scrapy.Spider):
     name="66ip"
-    url = "http://www.66ip.cn/areaindex_1/1.html"
     start_urls = [
-        url + str(i) for i in range(1,5)
+        "http://www.66ip.cn/areaindex_1/1.html", 
+        "http://www.66ip.cn/areaindex_1/2.html", 
+        "http://www.66ip.cn/areaindex_1/3.html", 
+        "http://www.66ip.cn/areaindex_1/4.html"
     ]
  
 
     def parse(self,response):
         item = IpProxyItem()
-        item['proxy_ipaddr'] =  response.xpath('//*[@id="footer"]/div/table//tr/td[1]/text()').extract()
-        item['proxy_port'] = response.xpath('//*[@id="footer"]/div/table//tr/td[2]/text()').extract()
+        item['proxy_ipaddr'] =  response.xpath('//*[@id="footer"]/div/table//tr/td[1]/text()').extract()[1:-1]
+        item['proxy_port'] = response.xpath('//*[@id="footer"]/div/table//tr/td[2]/text()').extract()[1:-1]
         '''
         print "=" * 15
         print "66ip ipaddr:"
