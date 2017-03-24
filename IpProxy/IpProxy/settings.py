@@ -53,10 +53,10 @@ DOWNLOAD_DELAY = 2
 
 # Enable or disable downloader middlewares
 # See http://scrapy.readthedocs.org/en/latest/topics/downloader-middleware.html
-DOWNLOADER_MIDDLEWARES = {
-    'IpProxy.middlewares.RandomUAMiddleware': 543,
-    'IpProxy.middlewares.PrintUAMiddleware': 544,
-}
+#DOWNLOADER_MIDDLEWARES = {
+#    'IpProxy.middlewares.RandomUAMiddleware': 543,
+#    'IpProxy.middlewares.PrintUAMiddleware': 544,
+#}
 
 # Enable or disable extensions
 # See http://scrapy.readthedocs.org/en/latest/topics/extensions.html
