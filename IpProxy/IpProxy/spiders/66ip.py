@@ -16,9 +16,11 @@ http://www.66ip.cn
 
 class sixsixip(scrapy.Spider):
     name="66ip"
+    url = "http://www.66ip.cn/areaindex_1/1.html"
     start_urls = [
-        "http://www.66ip.cn/areaindex_1/1.html",
+        url + str(i) for i in range(1,5)
     ]
+ 
 
     def parse(self,response):
         item = IpProxyItem()
